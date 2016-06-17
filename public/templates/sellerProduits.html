@@ -1,0 +1,58 @@
+</br>
+
+
+<div class="container">
+	<div class="container" >
+		<h1>Mes produits déja en ligne ({{mesProduits.length}})</h1>
+		<div class="row">
+			<div id="MesProduits" class="well col-sm-3" ng-repeat="produit in mesProduits"
+			style="width:">
+				<strong>{{produit.nom}}</strong></br>
+				Ajouté le: {{produit.date}}</br>
+				Type: {{produit.type}}</br>
+				Prix: {{produit.prix}}</br>
+				Livraison inclus dans ce prix: {{produit.livraison}}
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="well" style="width:40vw">
+		<h1>Ajouter un nouveau produit</h1>
+
+		<form>
+			<input type="text" placeholder="Nom" class="form-control" ng-model="nouveauProduit.nom"/>
+			<select  class="form-control" ng-model="nouveauProduit.type"/>
+				<option>Soins du visage</option>
+				<option>Toilette</option>
+			</select>
+			<label>
+				<input type="number" class="form-control" placeholder="prix" ng-model="nouveauProduit.prix"/>
+			</label>
+			</br>Le prix de la livraison inclus dans ce prix?
+			<label>
+				<input type="radio" name="livraison" value="true" class="form-control" ng-model="nouveauProduit.livraison"/>Oui
+			</label>
+			<label>
+				<input type="radio" name="livraison" value="false" class="form-control"ng-model="nouveauProduit.livraison"/>Non
+			</label>
+			<textarea type="text" placeholder="Détails" class="form-control"ng-model="nouveauProduit.details"/>
+			</textarea>
+			<button class="btn btn-info" ng-click="ajouterProduit(nouveauProduit)">Mettre en ligne
+			</button> </br>
+			{{message}}
+			</br>
+		</form>
+
+{{user.local.email}}
+{{nouveauProduit}}
+{{mesProduits}}
+
+	</div>
+
+	
+
+
+</div>

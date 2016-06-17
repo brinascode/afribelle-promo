@@ -1,0 +1,24 @@
+<h1> Mes informations </h1>
+
+{{message1}}
+
+<h2> Nom complet: {{user.moreInfo.prenom}} {{user.moreInfo.nomDeFamille}}</h2>
+<h2>Age:{{user.moreInfo.age}} </h2>
+<h2>Pseudo:{{user.moreInfo.pseudo}} </h2>
+<h1 ng-repeat="num in user.moreInfo.numerosDeTelephone">
+	** {{num}}
+</h1>
+
+
+Tu n'as pas encore mis tes informations personnelles à jour?
+Fais le maintenant!
+
+<h3> Nom de famille: <input type="text" ng-model="moreInfo.nomDeFamille"> </h3>
+<h3> Prénom: <input type="text" ng-model="moreInfo.prenom"> </h3>
+<h3>Age: <input type="number" ng-model="moreInfo.age"></h3>
+<h3>Pseudo: <input type="text" ng-model="moreInfo.pseudo"></h3>
+<button ng-click="updateMoreInfo()" class="btn btn-info">Mettre à jour</button>
+
+
+Fix numero de tel
+
