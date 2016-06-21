@@ -42,6 +42,7 @@ app.post("/landingSeller",function(req,res){
 app.get("/contacts",function(req,res){
 
 	Contact.find({},function(err,data){
+		if (err) throw err
 		res.json(data)
 	})
 })
