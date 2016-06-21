@@ -7,32 +7,36 @@ var Contact = require("../models/contact")
 
 app.post("/landingCustomer",function(req,res){
 
-var contact = new Contact()
-contact.nom = req.body.nom
-contact.telephone = req.body.telephone
-contact.message = req.body.message
-contact.date = new Date()
-contact.type = "Customer"
+	var contact = new Contact
+	({
+	nom:req.body.nom,
+	telephone:req.body.telephone,
+	message:req.body.message,
+	date:new Date(),
+	type : "Customer"
+	})
 
-contact.save(function(err,data){
-	res.redirect("/")
-})
-
+	contact.save(function(err,data){
+		res.redirect("/")
+	})
 
 })
 
 app.post("/landingSeller",function(req,res){
 
-var contact = new Contact()
-contact.nom = req.body.nom
-contact.telephone = req.body.telephone
-contact.message = req.body.message
-contact.date = new Date()
-contact.type = "Seller"
+	var contact = new Contact
+	({
+	nom:req.body.nom,
+	telephone:req.body.telephone,
+	message:req.body.message,
+	date:new Date(),
+	type : "Seller"
+	})
 
-contact.save(function(err,data){
-	res.redirect("/")
-})
+
+	contact.save(function(err,data){
+		res.redirect("/")
+	})
 
 })
 
