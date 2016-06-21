@@ -7,13 +7,7 @@ var Contact = require("../models/contact")
 
 app.post("/landingCustomer",function(req,res){
 
-	var contact = new Contact({
-	nom:req.body.nom,
-	telephone:req.body.telephone,
-	message:req.body.message,
-	date:new Date(),
-	type : "Customer"
-	})
+	var contact = new Contact(req.body)
 
 	contact.save(function(err,data){
 		if (err) throw err
@@ -24,16 +18,10 @@ app.post("/landingCustomer",function(req,res){
 
 app.post("/landingSeller",function(req,res){
 
-	var contact = new Contact({
-	nom:req.body.nom,
-	telephone:req.body.telephone,
-	message:req.body.message,
-	date:new Date(),
-	type : "Seller"
-	})
-
+	var contact = new Contact(req.body)
 
 	contact.save(function(err,data){
+		if (err) throw err
 		res.redirect("*")
 	})
 
