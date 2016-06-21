@@ -23,9 +23,14 @@ app.post("/landingSeller",function(req,res){
 
 	contact.save(function(err,data){
 		if (err) throw err
+
+		function(){
+			res.redirect("/")
+		}
 		
 	})
-	res.redirect("/")
+
+
 
 })
 
