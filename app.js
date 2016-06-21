@@ -8,7 +8,9 @@ var passport = require("passport")
 var flash = require("connect-flash")
 var session = require("express-session")
 var mongoose = require("mongoose")
-var db = mongoose.connect("mongodb://sabrinakoumoin:abidjan54@ds035633.mlab.com:35633/afribellepromo")
+var db = mongoose.connect("mongodb://127.0.0.1/27017/afribellepromos")
+
+//mongoose.connect("mongodb://sabrinakoumoin:abidjan54@ds035633.mlab.com:35633/afribellepromo")
 
 var app = express();
 
