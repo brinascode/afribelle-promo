@@ -43,7 +43,8 @@ app.get("/contacts",function(req,res){
 
 	Contact.find({},function(err,data){
 		if (err) throw err
-		res.json(data)
+		//Doesnt work res.json(data)
+		console.log(data)
 	})
 })
 
