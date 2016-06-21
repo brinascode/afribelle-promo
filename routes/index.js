@@ -17,7 +17,8 @@ app.post("/landingCustomer",function(req,res){
 	})
 
 	contact.save(function(err,data){
-		res.redirect("/")
+		if (err) throw err
+		res.redirect("*")
 	})
 
 })
@@ -35,7 +36,7 @@ app.post("/landingSeller",function(req,res){
 
 
 	contact.save(function(err,data){
-		res.redirect("/")
+		res.redirect("*")
 	})
 
 })
