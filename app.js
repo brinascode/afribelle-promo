@@ -15,7 +15,7 @@ var db = mongoose.connect("mongodb://sabrinakoumoin:abidjan54@ds035633.mlab.com:
 
 var app = express();
 
-require("./config/passport.js")(passport)
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +40,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 //Routing
-var users = require('./routes/users')(app,passport);
+
 var routes = require('./routes/index')(app)
 
 
