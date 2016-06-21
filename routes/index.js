@@ -7,8 +7,7 @@ var Contact = require("../models/contact")
 
 app.post("/landingCustomer",function(req,res){
 
-	var contact = new Contact
-	({
+	var contact = new Contact({
 	nom:req.body.nom,
 	telephone:req.body.telephone,
 	message:req.body.message,
@@ -25,8 +24,7 @@ app.post("/landingCustomer",function(req,res){
 
 app.post("/landingSeller",function(req,res){
 
-	var contact = new Contact
-	({
+	var contact = new Contact({
 	nom:req.body.nom,
 	telephone:req.body.telephone,
 	message:req.body.message,
