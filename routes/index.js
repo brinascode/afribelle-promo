@@ -12,7 +12,7 @@ app.post("/landingCustomer",function(req,res){
 	contact.save(function(err){
 		if (err) throw err
 		
-		res.send("Hey")
+		res.json({})
 		
 	})
 
