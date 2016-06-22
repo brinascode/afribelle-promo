@@ -2,7 +2,7 @@ var mongoose = require("mongoose")
 var Schema = mongoose.Schema
 
 
-var contact = new Schema ({
+var contact = new Schema({
 nom:String, 
 date:Date,
 telephone:Number,

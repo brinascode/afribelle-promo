@@ -9,9 +9,10 @@ app.post("/landingCustomer",function(req,res){
 
 	var contact = new Contact(req.body)
 
-	contact.save(function(err,data){
+	contact.save(function(err){
 		if (err) throw err
-		res.redirect("/")
+		
+		res.send("Hey")
 		
 	})
 
@@ -22,11 +23,10 @@ app.post("/landingSeller",function(req,res){
 
 	var contact = new Contact(req.body)
 
-	contact.save(function(err,data){
+	contact.save(function(err){
 		if (err) throw err
-
 		
-			res.redirect("/")
+		res.redirect("/")
 		
 		
 	})
